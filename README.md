@@ -5,7 +5,6 @@ An Intelligent Transportation System (ITS) project focused on identifying accide
 
 The system combines **DBSCAN clustering, geospatial visualization, and a real-time simulation prototype** to support proactive road safety planning.
 
----
 
 ## 🌐 System Overview
 
@@ -15,11 +14,9 @@ The project is built around three major components:
 2. **Interactive Map Visualization**
 3. **Real-Time Driving Simulation Prototype**
 
----
-
 # 🖥️ Command Center Interface
 
-![NH-53 Command Center](images/command_center.png)
+![NH-53 Command Center](NH53SafetyMoniter.png)
 
 The main control panel provides:
 
@@ -31,11 +28,10 @@ The main control panel provides:
 
 This serves as the central gateway for analytics and simulation features.
 
----
 
 # 🗺️ Hotspot Analytics Dashboard
 
-![Hotspot Analytics](images/hotspot_analytics.png)
+![Hotspot Analytics](HotspotAnalysis.png)
 
 An interactive geospatial dashboard built using:
 
@@ -59,11 +55,10 @@ The dashboard identified:
 - **99 hotspot clusters detected**
 - **504 isolated accidents (noise)**
 
----
 
 # 🚗 Real-Time Simulation Prototype (Run-a-Car)
 
-![Simulation Dashboard](images/simulation_dashboard.png)
+![Simulation Dashboard](RTS.png)
 
 A predictive simulation system that mimics real driving along NH-53.
 
@@ -84,7 +79,6 @@ When approaching a hotspot, the system triggers:
 
 This demonstrates how hotspot intelligence can be integrated into smart transportation systems.
 
----
 
 # 🧠 Methodology
 
@@ -99,7 +93,6 @@ This demonstrates how hotspot intelligence can be integrated into smart transpor
 
 The algorithm detects dense accident regions and filters isolated incidents.
 
----
 
 ## 🚨 Severity Classification
 
@@ -115,7 +108,6 @@ Hotspots are categorized as:
 
 This classification helps prioritize safety interventions.
 
----
 
 # 🏗️ System Workflow
 
@@ -127,7 +119,6 @@ This classification helps prioritize safety interventions.
 6. Web-Based Visualization  
 7. Simulation Integration  
 
----
 
 # 📊 Key Observations
 
@@ -136,7 +127,6 @@ This classification helps prioritize safety interventions.
 - Most incidents occurred on straight road segments  
 - Majority of accidents occurred during clear weather  
 
----
 
 # 🛠️ Tech Stack
 
@@ -149,7 +139,6 @@ This classification helps prioritize safety interventions.
 | Data Format | GeoJSON |
 | Simulation UI | HTML, CSS, JavaScript |
 
----
 
 # 🚀 Future Enhancements
 
@@ -159,7 +148,6 @@ This classification helps prioritize safety interventions.
 - Integration with emergency alert systems  
 - Public safety deployment for traffic authorities  
 
----
 
 # 👨‍💻 Contributors
 
@@ -167,7 +155,6 @@ This classification helps prioritize safety interventions.
 - Harphool Singh  
 - Guided by: Dr. Shriniwas Arkatkar  
 
----
 
 # 🎯 Conclusion
 
