@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>NH-53 Analytics Map</title>
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+  /* Base & Reset */
+  body{margin:0; font-family:'Outfit', sans-serif; overflow:hidden; background:#0f172a;}
+  
+  /* Full Screen Map */
+  #map { width: 100vw; height: 100vh; z-index: 1; }
+
+  /* Floating UI Layer */
+  .ui-layer { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1000; display: flex; }
+  
+  /* Sidebar styling */
+  .sidebar {
+    pointer-events: auto;
+    width: 340px;
+    height: calc(100vh - 40px);
+    margin: 20px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+    border-radius: 16px;
+    box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transform: translateX(0);
+    transition: transform 0.3s ease;
+  }
+  
+  .sidebar-header { padding: 20px; background: #f8fafc; border-bottom: 1px solid #e2e8f0; }
+  .brand { font-size: 18px; font-weight: 700; color: #1e293b; display: flex; align-items: center; gap: 8px; }
+  .back-link { font-size: 12px; color: #64748b; text-decoration: none; font-weight: 600; margin-top: 4px; display: block; }
+  
+  .sidebar-content { padding: 20px; overflow-y: auto; flex: 1; }
+
+  /* Filter Chips */
+  .filters { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px; }
+  .filter-btn {
+    flex: 1; padding: 10px; border-radius: 8px; border: 1px solid #cbd5e1; background: #fff;
+    cursor: pointer; font-family: inherit; font-size: 12px; font-weight: 600; color: #475569;
+    transition: all 0.2s; box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  }
+  .filter-btn:hover { transform: translateY(-2px); box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+  .filter-btn.active { background: #3b82f6; color: white; border-color: #3b82f6; }
+  
+  /* Search Input */
+  .search-box { position: relative; margin-bottom: 20px; }
+  input#q {
+    width: 100%; box-sizing: border-box; padding: 12px 16px; border-radius: 12px;
+    border: 2px solid #e2e8f0; font-family: inherit; outline: none; transition: border 0.2s;
+  }
+  input#q:focus { border-color: #3b82f6; }
+
+  /* Info Stats */
+  .stat-box { background: #eff6ff; padding: 16px; border-radius: 12px; color: #1e3a8a; font-size: 14px; font-weight: 600; border: 1px solid #dbeafe; }
+
+  /* Legend floating bottom left */
+  .legend-float {
+    pointer-events: auto;
+    position: absolute; bottom: 30px; left: 380px;
+    background: white; padding: 12px 20px; border-radius: 50px;
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+    display: flex; gap: 20px; font-size: 13px; font-weight: 500;
+  }
+  .dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; margin-right: 6px; }
+
+  /* Map Marker Pulse Animation */
+  .leaflet-interactive { transition: all 0.3s; }
+  
+  /* Custom Pulse for Critical (We will inject this class via JS logic if we could, but to keep logic 100% same, we use CSS targeting on colors) */
+  /* Note: Leaflet circleMarkers are SVG paths. */
+</style>
+</head>
+<body>
+
+<div id="map"></div>
+
+<div class="ui-layer">
+  <div class="sidebar">
+    <div class="sidebar-header">
+      <div class="brand">
+        <span style="background:#2563eb; width:24px; height:24px; border-radius:6px; display:flex; align-items:center; justify-content:center; color:white;">⚡</span>
+        NH-53 Analytics
+      </div>
+      <a href="index.html" class="back-link">← Return to Command Center</a>
+    </div>
+    
+    <div class="sidebar-content">
+      <h4 style="margin:0 0 12px; color:#64748b; font-size:12px; text-transform:uppercase; letter-spacing:1px;">Severity Filters</h4>
+      <div class="filters">
+        <button id="btnAll" class="filter-btn">All</button>
+        <button id="btnCritical" class="filter-btn" style="border-bottom: 3px solid #ef4444;">Critical</button>
+        <button id="btnSerious" class="filter-btn" style="border-bottom: 3px solid #f97316;">Serious</button>
+        <button id="btnModerate" class="filter-btn" style="border-bottom: 3px solid #fbbf24;">Moderate</button>
+      </div>
+
+      <h4 style="margin:0 0 12px; color:#64748b; font-size:12px; text-transform:uppercase; letter-spacing:1px;">Deep Search</h4>
+      <div class="search-box">
+        <input id="q" placeholder="Search cause, weather, nature..." />
+      </div>
+
+      <div id="info" class="stat-box">Loading data...</div>
+      
+      <div style="margin-top:20px; font-size:13px; color:#64748b; line-height:1.5;">
+        <p>Interactive Map Instructions:</p>
+        <ul style="padding-left:20px; margin:0;">
+          <li>Click points for detailed crash analysis.</li>
+          <li>Use StreetView links to inspect road geometry.</li>
+        </ul>
+      </div>
+      
+       <a href="run_car.html" style="margin-top:auto; display:block; padding:12px; background:#1e293b; color:white; text-align:center; text-decoration:none; border-radius:8px; font-size:13px; font-weight:600;">Go to Driving Simulator →</a>
+    </div>
+  </div>
+
+  <div class="legend-float">
+    <div style="display:flex;align-items:center"><div class="dot" style="background:#ef4444; box-shadow:0 0 8px #ef4444;"></div>Critical</div>
+    <div style="display:flex;align-items:center"><div class="dot" style="background:#f97316"></div>Serious</div>
+    <div style="display:flex;align-items:center"><div class="dot" style="background:#fbbf24"></div>Moderate</div>
+  </div>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+/* ---------------------------------------------------- */
+/* LOGIC UNCHANGED - EXACTLY AS PROVIDED IN ORIGINAL   */
+/* ---------------------------------------------------- */
+const GEO = "hotspots.geojson"; 
+let map = L.map('map', {zoomControl: false}).setView([21.12,73.35],9);
+L.control.zoom({position:'topright'}).addTo(map);
+
+// Using a darker, high-contrast map tile for the "Dashboard" look
+L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+  attribution: '&copy; OpenStreetMap &copy; CARTO',
+  maxZoom: 19
+}).addTo(map);
+
+let gLayer = L.layerGroup().addTo(map);
+let dataFeatures = [];
+
+function colorFor(level){
+  if(level==="Critical") return "#ef4444";
+  if(level==="Serious") return "#f97316";
+  return "#fbbf24";
+}
+function buildPopup(p){
+  const years = Array.isArray(p.years_present) ? p.years_present.join(", ") : (p.years_present||"");
+  const dn = p.Dominant_Nature || p.Dominant_Nature_of_Accident || "";
+  const dc = p.Dominant_Causes || p.Dominant_Cause || "";
+  const road = p.Dominant_Road || "";
+  const weather = p.Dominant_Weather || "";
+  const acc = p.accident_count || 0;
+  const sev = p.severity_sum || 0;
+  const precautions = (p.Hotspot_Level==="Critical") ? ["Engineering redesign","Crash barrier repair","Speed reduction + enforcement","Improve signage"] : (p.Hotspot_Level==="Serious" ? ["Rumble strips","Signage","Light enforcement"] : ["Warning signage","Monitor accidents"]);
+  
+  // High-class popup styling
+  return `<div style="font-family:'Outfit',sans-serif;">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;border-bottom:1px solid #eee;padding-bottom:8px;">
+        <span style="font-weight:700; color:${colorFor(p.Hotspot_Level)}">${p.Hotspot_Level} Risk</span>
+        <span style="background:#f1f5f9;padding:2px 6px;border-radius:4px;font-size:11px;font-weight:700">${acc} Accidents</span>
+    </div>
+    <div style="font-size:13px; color:#334155; line-height:1.6;">
+        <b>Severity Index:</b> ${sev}<br/>
+        <b>Active Years:</b> ${years}<br/>
+        <b>Nature:</b> ${dn} <br/>
+        <b>Cause:</b> ${dc} <br/>
+        <div style="margin-top:8px;background:#f8fafc;padding:8px;border-radius:6px;border:1px solid #e2e8f0;">
+            <b style="font-size:11px;text-transform:uppercase;color:#64748b">Recommended Actions</b>
+            <ul style="margin:4px 0 0 0;padding-left:16px;">${precautions.map(x=>`<li>${x}</li>`).join('')}</ul>
+        </div>
+    </div>
+    <div style="margin-top:10px;display:flex;gap:8px;">
+        <a target="_blank" href="${p.google_maps_url||'#'}" style="flex:1;text-align:center;padding:6px;background:#3b82f6;color:white;text-decoration:none;border-radius:4px;font-size:12px;">Google Maps</a>
+        <a target="_blank" href="${p.streetview_url||'#'}" style="flex:1;text-align:center;padding:6px;background:#e2e8f0;color:#334155;text-decoration:none;border-radius:4px;font-size:12px;">Street View</a>
+    </div>
+  </div>`;
+}
+
+fetch(GEO).then(r=>r.json()).then(gj=>{
+  dataFeatures = gj.features || [];
+  dataFeatures.forEach(f=>{
+    const p = f.properties||{};
+    const lat = f.geometry.coordinates[1], lon = f.geometry.coordinates[0];
+    const level = p.Hotspot_Level || "Moderate";
+    // Slightly larger radius for better visuals
+    const m = L.circleMarker([lat,lon], {radius:8, fillColor:colorFor(level), fillOpacity:0.8, weight:2, color:"#fff"});
+    m.bindPopup(buildPopup(p), {maxWidth:320, className:'custom-popup'});
+    m.addTo(gLayer);
+    f._marker = m;
+  });
+  if(dataFeatures.length) map.fitBounds(L.latLngBounds(dataFeatures.map(f=>[f.geometry.coordinates[1], f.geometry.coordinates[0]])).pad(0.12));
+  document.getElementById('info').innerText = `Displaying ${dataFeatures.length} Hotspots`;
+});
+
+document.getElementById('btnAll').onclick = ()=> filterMap();
+document.getElementById('btnCritical').onclick = ()=> filterMap("Critical");
+document.getElementById('btnSerious').onclick = ()=> filterMap("Serious");
+document.getElementById('btnModerate').onclick = ()=> filterMap("Moderate");
+document.getElementById('q').addEventListener('input', ()=> filterMap(null, document.getElementById('q').value));
+
+function filterMap(level=null, query=""){
+  gLayer.clearLayers();
+  const q = (query||"").toLowerCase().trim();
+  let count = 0;
+  dataFeatures.forEach(f=>{
+    const p=f.properties||{};
+    const lev = p.Hotspot_Level || "Moderate";
+    const matchesLevel = (!level) || (lev===level);
+    const text = JSON.stringify(p).toLowerCase();
+    const matchesQuery = !q || text.indexOf(q) !== -1;
+    if(matchesLevel && matchesQuery){
+      f._marker.addTo(gLayer);
+      count++;
+    }
+  });
+  document.getElementById('info').innerHTML = `Found <b style="color:#2563eb">${count}</b> matching hotspots`;
+}
+</script>
+</body>
+</html>

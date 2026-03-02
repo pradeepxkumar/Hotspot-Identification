@@ -1,0 +1,2282 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.3463066,
+          21.1025922
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 0,
+        "accident_count": 5,
+        "Hotspot_Level": "Serious",
+        "severity_sum": 14.5,
+        "years_present": "[2020, 2022, 2023]",
+        "Dominant_Nature": "Head on collision",
+        "Dominant_Causes": "Overspeeding",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.1025922,73.3463066",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.1025922,73.3463066"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.7891002,
+          21.120017
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 1,
+        "accident_count": 5,
+        "Hotspot_Level": "Serious",
+        "severity_sum": 20.5,
+        "years_present": "[2020, 2021, 2022]",
+        "Dominant_Nature": "Skidding",
+        "Dominant_Causes": "Driver fault",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.120017,72.7891002",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.120017,72.7891002"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.82077225,
+          21.1168695
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 2,
+        "accident_count": 4,
+        "Hotspot_Level": "Serious",
+        "severity_sum": 15.5,
+        "years_present": "[2020, 2022, 2024]",
+        "Dominant_Nature": "Rear End Collision",
+        "Dominant_Causes": "Overspeeding",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.1168695,72.82077225",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.1168695,72.82077225"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.9065144,
+          21.0901906
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 3,
+        "accident_count": 5,
+        "Hotspot_Level": "Serious",
+        "severity_sum": 9.5,
+        "years_present": "[2020, 2023, 2024]",
+        "Dominant_Nature": "Overturning",
+        "Dominant_Causes": "Overspeeding",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.0901906,72.9065144",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.0901906,72.9065144"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.80330766666667,
+          21.120506833333334
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 4,
+        "accident_count": 6,
+        "Hotspot_Level": "Critical",
+        "severity_sum": 17.5,
+        "years_present": "[2020, 2022]",
+        "Dominant_Nature": "Rear End Collision",
+        "Dominant_Causes": "Drunken",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.120506833333334,72.80330766666667",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.120506833333334,72.80330766666667"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.3336936,
+          21.0996342
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 5,
+        "accident_count": 5,
+        "Hotspot_Level": "Critical",
+        "severity_sum": 34.5,
+        "years_present": "[2020, 2022, 2023, 2024]",
+        "Dominant_Nature": "Rear End Collision",
+        "Dominant_Causes": "Overspeeding",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.0996342,73.3336936",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.0996342,73.3336936"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.55092442857143,
+          21.163569
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 6,
+        "accident_count": 7,
+        "Hotspot_Level": "Critical",
+        "severity_sum": 17.5,
+        "years_present": "[2020, 2022, 2023]",
+        "Dominant_Nature": "Head on collision",
+        "Dominant_Causes": "Vehicle out of control",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.163569,73.55092442857143",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.163569,73.55092442857143"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.10375666666667,
+          21.104193666666664
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 7,
+        "accident_count": 3,
+        "Hotspot_Level": "Critical",
+        "severity_sum": 31.0,
+        "years_present": "[2020, 2023]",
+        "Dominant_Nature": "Rear End Collision",
+        "Dominant_Causes": "Overspeeding",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.104193666666664,73.10375666666667",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.104193666666664,73.10375666666667"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.96911575,
+          21.085648
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 8,
+        "accident_count": 4,
+        "Hotspot_Level": "Serious",
+        "severity_sum": 13.0,
+        "years_present": "[2020, 2022, 2024]",
+        "Dominant_Nature": "Overturning",
+        "Dominant_Causes": "Overspeeding",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.085648,72.96911575",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.085648,72.96911575"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.1726015,
+          21.105779833333333
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 9,
+        "accident_count": 6,
+        "Hotspot_Level": "Critical",
+        "severity_sum": 14.0,
+        "years_present": "[2020]",
+        "Dominant_Nature": "Skidding",
+        "Dominant_Causes": "Overspeeding",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.105779833333333,73.1726015",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.105779833333333,73.1726015"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.16986650000001,
+          21.10488425
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 10,
+        "accident_count": 4,
+        "Hotspot_Level": "Serious",
+        "severity_sum": 13.0,
+        "years_present": "[2020, 2023]",
+        "Dominant_Nature": "Rear End Collision",
+        "Dominant_Causes": "Overspeeding",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.10488425,73.16986650000001",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.10488425,73.16986650000001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.11731933333333,
+          21.10768966666667
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 11,
+        "accident_count": 3,
+        "Hotspot_Level": "Moderate",
+        "severity_sum": 8.5,
+        "years_present": "[2020, 2024]",
+        "Dominant_Nature": "Collision Brush/Side Wipe",
+        "Dominant_Causes": "Driver fault",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.10768966666667,73.11731933333333",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.10768966666667,73.11731933333333"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.37268988888889,
+          21.12620177777778
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 12,
+        "accident_count": 9,
+        "Hotspot_Level": "Critical",
+        "severity_sum": 46.5,
+        "years_present": "[2020, 2021, 2022, 2023, 2024]",
+        "Dominant_Nature": "Rear End Collision",
+        "Dominant_Causes": "Overspeeding",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.12620177777778,73.37268988888889",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.12620177777778,73.37268988888889"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.479490375,
+          21.135286375
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 13,
+        "accident_count": 8,
+        "Hotspot_Level": "Critical",
+        "severity_sum": 26.0,
+        "years_present": "[2020, 2022, 2023, 2024]",
+        "Dominant_Nature": "Head on collision",
+        "Dominant_Causes": "Driver fault",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.135286375,73.479490375",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.135286375,73.479490375"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.306371,
+          21.0974125
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 14,
+        "accident_count": 6,
+        "Hotspot_Level": "Critical",
+        "severity_sum": 25.5,
+        "years_present": "[2020, 2022, 2023, 2024]",
+        "Dominant_Nature": "Rear End Collision",
+        "Dominant_Causes": "Driver fault",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.0974125,73.306371",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.0974125,73.306371"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.14163885714285,
+          21.109503857142855
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 15,
+        "accident_count": 7,
+        "Hotspot_Level": "Critical",
+        "severity_sum": 22.0,
+        "years_present": "[2020, 2022, 2023, 2024]",
+        "Dominant_Nature": "Head on collision",
+        "Dominant_Causes": "Overspeeding",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.109503857142855,73.14163885714285",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.109503857142855,73.14163885714285"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.753817,
+          21.1358849
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 16,
+        "accident_count": 10,
+        "Hotspot_Level": "Critical",
+        "severity_sum": 100.0,
+        "years_present": "[2020, 2022, 2023, 2024]",
+        "Dominant_Nature": "Overturning",
+        "Dominant_Causes": "Overspeeding",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.1358849,72.753817",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.1358849,72.753817"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.20199366666667,
+          21.10575933333333
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 17,
+        "accident_count": 3,
+        "Hotspot_Level": "Moderate",
+        "severity_sum": 2.5,
+        "years_present": "[2020, 2022]",
+        "Dominant_Nature": "Head on collision",
+        "Dominant_Causes": "Overspeeding",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.10575933333333,73.20199366666667",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.10575933333333,73.20199366666667"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.167978,
+          21.1042465
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 18,
+        "accident_count": 4,
+        "Hotspot_Level": "Serious",
+        "severity_sum": 5.0,
+        "years_present": "[2020, 2021, 2022, 2024]",
+        "Dominant_Nature": "8 Unknown vehicle hit Bike",
+        "Dominant_Causes": "Overspeeding",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.1042465,73.167978",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.1042465,73.167978"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.49351025,
+          21.1397945
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 19,
+        "accident_count": 16,
+        "Hotspot_Level": "Critical",
+        "severity_sum": 47.5,
+        "years_present": "[2020, 2023, 2024]",
+        "Dominant_Nature": "Skidding",
+        "Dominant_Causes": "Driver fault",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.1397945,73.49351025",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.1397945,73.49351025"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.530115,
+          21.153078
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 20,
+        "accident_count": 3,
+        "Hotspot_Level": "Moderate",
+        "severity_sum": 10.0,
+        "years_present": "[2020, 2023]",
+        "Dominant_Nature": "Head on collision",
+        "Dominant_Causes": "Overspeeding",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.153078,73.530115",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.153078,73.530115"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.36826959999999,
+          21.1255994
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 21,
+        "accident_count": 5,
+        "Hotspot_Level": "Serious",
+        "severity_sum": 10.5,
+        "years_present": "[2020, 2022, 2024]",
+        "Dominant_Nature": "Rear End Collision",
+        "Dominant_Causes": "Driver fault",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.1255994,73.36826959999999",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.1255994,73.36826959999999"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.81742440000001,
+          21.118405000000003
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 22,
+        "accident_count": 5,
+        "Hotspot_Level": "Serious",
+        "severity_sum": 12.0,
+        "years_present": "[2020, 2023, 2024]",
+        "Dominant_Nature": "Skidding",
+        "Dominant_Causes": "Driver fault",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.118405000000003,72.81742440000001",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.118405000000003,72.81742440000001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.40909266666667,
+          21.12595733333333
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 23,
+        "accident_count": 3,
+        "Hotspot_Level": "Serious",
+        "severity_sum": 18.5,
+        "years_present": "[2020, 2023]",
+        "Dominant_Nature": "Overturning",
+        "Dominant_Causes": "Overspeeding",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.12595733333333,73.40909266666667",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.12595733333333,73.40909266666667"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.8424076,
+          21.1093166
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 24,
+        "accident_count": 5,
+        "Hotspot_Level": "Serious",
+        "severity_sum": 15.0,
+        "years_present": "[2020, 2024]",
+        "Dominant_Nature": "Overturning",
+        "Dominant_Causes": "Driver fault",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.1093166,72.8424076",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.1093166,72.8424076"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.932821,
+          21.085995
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 25,
+        "accident_count": 5,
+        "Hotspot_Level": "Serious",
+        "severity_sum": 6.0,
+        "years_present": "[2020, 2022, 2024]",
+        "Dominant_Nature": "Overturning",
+        "Dominant_Causes": "Overspeeding",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.085995,72.932821",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.085995,72.932821"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.28540083333333,
+          21.104464
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 26,
+        "accident_count": 6,
+        "Hotspot_Level": "Critical",
+        "severity_sum": 26.0,
+        "years_present": "[2020, 2022]",
+        "Dominant_Nature": "Rear End Collision",
+        "Dominant_Causes": "Overspeeding",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.104464,73.28540083333333",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.104464,73.28540083333333"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.85808133333333,
+          21.10364266666667
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 27,
+        "accident_count": 3,
+        "Hotspot_Level": "Moderate",
+        "severity_sum": 9.0,
+        "years_present": "[2020, 2023, 2024]",
+        "Dominant_Nature": "Collision Brush/Side Wipe",
+        "Dominant_Causes": "Driver fault",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.10364266666667,72.85808133333333",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.10364266666667,72.85808133333333"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.744658,
+          21.148060833333336
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 28,
+        "accident_count": 6,
+        "Hotspot_Level": "Critical",
+        "severity_sum": 16.0,
+        "years_present": "[2020, 2022, 2024]",
+        "Dominant_Nature": "Rear End Collision",
+        "Dominant_Causes": "Overspeeding",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.148060833333336,72.744658",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.148060833333336,72.744658"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.35298825000001,
+          21.11023725
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 29,
+        "accident_count": 4,
+        "Hotspot_Level": "Serious",
+        "severity_sum": 9.0,
+        "years_present": "[2020, 2022]",
+        "Dominant_Nature": "8 Bike hit to Pedestrian",
+        "Dominant_Causes": "Overspeeding",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.11023725,73.35298825000001",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.11023725,73.35298825000001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.83021266666667,
+          21.112085333333333
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 30,
+        "accident_count": 3,
+        "Hotspot_Level": "Moderate",
+        "severity_sum": 5.0,
+        "years_present": "[2020, 2022]",
+        "Dominant_Nature": "Skidding",
+        "Dominant_Causes": "Overspeeding",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.112085333333333,72.83021266666667",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.112085333333333,72.83021266666667"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.95861024999999,
+          21.0862985
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 31,
+        "accident_count": 4,
+        "Hotspot_Level": "Serious",
+        "severity_sum": 23.5,
+        "years_present": "[2020, 2023, 2024]",
+        "Dominant_Nature": "Rear End Collision",
+        "Dominant_Causes": "Overspeeding",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.0862985,72.95861024999999",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.0862985,72.95861024999999"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.81423375,
+          21.119733875
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 32,
+        "accident_count": 8,
+        "Hotspot_Level": "Critical",
+        "severity_sum": 44.5,
+        "years_present": "[2020, 2021, 2022, 2024]",
+        "Dominant_Nature": "Head on collision",
+        "Dominant_Causes": "Overspeeding",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.119733875,72.81423375",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.119733875,72.81423375"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.73822257142857,
+          21.15966585714286
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 33,
+        "accident_count": 7,
+        "Hotspot_Level": "Critical",
+        "severity_sum": 32.5,
+        "years_present": "[2020, 2022]",
+        "Dominant_Nature": "Collision Brush/Side Wipe",
+        "Dominant_Causes": "Driver fault",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.15966585714286,72.73822257142857",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.15966585714286,72.73822257142857"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.75826966666666,
+          21.132568666666668
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 34,
+        "accident_count": 3,
+        "Hotspot_Level": "Moderate",
+        "severity_sum": 2.0,
+        "years_present": "[2020, 2023]",
+        "Dominant_Nature": "Head on collision",
+        "Dominant_Causes": "Overspeeding",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.132568666666668,72.75826966666666",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.132568666666668,72.75826966666666"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.765674,
+          21.128388333333334
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 35,
+        "accident_count": 3,
+        "Hotspot_Level": "Moderate",
+        "severity_sum": 8.5,
+        "years_present": "[2020, 2022]",
+        "Dominant_Nature": "Skidding",
+        "Dominant_Causes": "Overspeeding",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.128388333333334,72.765674",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.128388333333334,72.765674"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.71092866666667,
+          21.18739066666667
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 36,
+        "accident_count": 3,
+        "Hotspot_Level": "Serious",
+        "severity_sum": 19.5,
+        "years_present": "[2020, 2022]",
+        "Dominant_Nature": "Rear End Collision",
+        "Dominant_Causes": "Drunken",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.18739066666667,72.71092866666667",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.18739066666667,72.71092866666667"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.95470850000001,
+          21.0862375
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 37,
+        "accident_count": 4,
+        "Hotspot_Level": "Serious",
+        "severity_sum": 6.0,
+        "years_present": "[2020, 2022, 2023, 2024]",
+        "Dominant_Nature": "Collision Brush/Side Wipe",
+        "Dominant_Causes": "Driver fault",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.0862375,72.95470850000001",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.0862375,72.95470850000001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.146169625,
+          21.1093125
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 38,
+        "accident_count": 8,
+        "Hotspot_Level": "Critical",
+        "severity_sum": 22.5,
+        "years_present": "[2020, 2022, 2023, 2024]",
+        "Dominant_Nature": "Overturning",
+        "Dominant_Causes": "Overspeeding",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.1093125,73.146169625",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.1093125,73.146169625"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.12469433333334,
+          21.10924733333333
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 39,
+        "accident_count": 3,
+        "Hotspot_Level": "Serious",
+        "severity_sum": 15.5,
+        "years_present": "[2020, 2024]",
+        "Dominant_Nature": "Overturning",
+        "Dominant_Causes": "Overspeeding",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.10924733333333,73.12469433333334",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.10924733333333,73.12469433333334"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.60753633333333,
+          21.17832
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 40,
+        "accident_count": 3,
+        "Hotspot_Level": "Moderate",
+        "severity_sum": 8.0,
+        "years_present": "[2020, 2022]",
+        "Dominant_Nature": "Rear End Collision",
+        "Dominant_Causes": "Overspeeding",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.17832,73.60753633333333",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.17832,73.60753633333333"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.79715733333333,
+          21.120291
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 41,
+        "accident_count": 3,
+        "Hotspot_Level": "Moderate",
+        "severity_sum": 9.0,
+        "years_present": "[2020, 2022]",
+        "Dominant_Nature": "Skidding",
+        "Dominant_Causes": "Vehicle out of control",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.120291,72.79715733333333",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.120291,72.79715733333333"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.540189,
+          21.15912233333333
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 42,
+        "accident_count": 3,
+        "Hotspot_Level": "Moderate",
+        "severity_sum": 5.5,
+        "years_present": "[2020, 2022, 2024]",
+        "Dominant_Nature": "Head on collision",
+        "Dominant_Causes": "Overspeeding",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.15912233333333,73.540189",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.15912233333333,73.540189"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.1335106,
+          21.1099418
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 43,
+        "accident_count": 5,
+        "Hotspot_Level": "Serious",
+        "severity_sum": 14.0,
+        "years_present": "[2020, 2023, 2024]",
+        "Dominant_Nature": "Skidding",
+        "Dominant_Causes": "Driver fault",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.1099418,73.1335106",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.1099418,73.1335106"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.5917054,
+          21.1836228
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 44,
+        "accident_count": 5,
+        "Hotspot_Level": "Serious",
+        "severity_sum": 7.0,
+        "years_present": "[2020, 2022, 2023]",
+        "Dominant_Nature": "Head on collision",
+        "Dominant_Causes": "Overspeeding",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.1836228,73.5917054",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.1836228,73.5917054"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.37686314285715,
+          21.126223714285715
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 45,
+        "accident_count": 7,
+        "Hotspot_Level": "Critical",
+        "severity_sum": 25.0,
+        "years_present": "[2020, 2022]",
+        "Dominant_Nature": "Rear End Collision",
+        "Dominant_Causes": "Overspeeding",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.126223714285715,73.37686314285715",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.126223714285715,73.37686314285715"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.46887039999999,
+          21.1317434
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 46,
+        "accident_count": 5,
+        "Hotspot_Level": "Serious",
+        "severity_sum": 14.0,
+        "years_present": "[2020, 2023, 2024]",
+        "Dominant_Nature": "Head on collision",
+        "Dominant_Causes": "Driver fault",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.1317434,73.46887039999999",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.1317434,73.46887039999999"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.74550380000001,
+          21.1466182
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 47,
+        "accident_count": 5,
+        "Hotspot_Level": "Serious",
+        "severity_sum": 15.5,
+        "years_present": "[2020, 2023, 2024]",
+        "Dominant_Nature": "Head on collision",
+        "Dominant_Causes": "Driver fault",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.1466182,72.74550380000001",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.1466182,72.74550380000001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.386212,
+          21.12620825
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 48,
+        "accident_count": 4,
+        "Hotspot_Level": "Serious",
+        "severity_sum": 21.5,
+        "years_present": "[2020, 2021, 2023, 2024]",
+        "Dominant_Nature": "Collision Brush/Side Wipe",
+        "Dominant_Causes": "Overspeeding",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.12620825,73.386212",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.12620825,73.386212"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.44494566666667,
+          21.128813
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 49,
+        "accident_count": 3,
+        "Hotspot_Level": "Moderate",
+        "severity_sum": 11.5,
+        "years_present": "[2020, 2024]",
+        "Dominant_Nature": "Head on collision",
+        "Dominant_Causes": "Drunken",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.128813,73.44494566666667",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.128813,73.44494566666667"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.85546975,
+          21.104444
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 50,
+        "accident_count": 8,
+        "Hotspot_Level": "Critical",
+        "severity_sum": 24.5,
+        "years_present": "[2020, 2022, 2024]",
+        "Dominant_Nature": "Head on collision",
+        "Dominant_Causes": "Driver fault",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.104444,72.85546975",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.104444,72.85546975"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.93979875,
+          21.08502425
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 51,
+        "accident_count": 4,
+        "Hotspot_Level": "Serious",
+        "severity_sum": 6.5,
+        "years_present": "[2020, 2022, 2024]",
+        "Dominant_Nature": "Head on collision",
+        "Dominant_Causes": "Overspeeding",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.08502425,72.93979875",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.08502425,72.93979875"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.38264183333334,
+          21.1262085
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 52,
+        "accident_count": 6,
+        "Hotspot_Level": "Critical",
+        "severity_sum": 16.5,
+        "years_present": "[2020, 2022, 2023, 2024]",
+        "Dominant_Nature": "Rear End Collision",
+        "Dominant_Causes": "Driver fault",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.1262085,73.38264183333334",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.1262085,73.38264183333334"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.7634998,
+          21.1296464
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 53,
+        "accident_count": 5,
+        "Hotspot_Level": "Serious",
+        "severity_sum": 20.5,
+        "years_present": "[2020, 2022, 2023]",
+        "Dominant_Nature": "Head on collision",
+        "Dominant_Causes": "Mechanical / Road condition",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.1296464,72.7634998",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.1296464,72.7634998"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.481715,
+          21.136015666666665
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 54,
+        "accident_count": 3,
+        "Hotspot_Level": "Moderate",
+        "severity_sum": 8.0,
+        "years_present": "[2020, 2023]",
+        "Dominant_Nature": "Skidding",
+        "Dominant_Causes": "Driver fault",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.136015666666665,73.481715",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.136015666666665,73.481715"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.519216375,
+          21.147699625
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 55,
+        "accident_count": 8,
+        "Hotspot_Level": "Critical",
+        "severity_sum": 21.5,
+        "years_present": "[2020, 2023, 2024]",
+        "Dominant_Nature": "Head on collision",
+        "Dominant_Causes": "Overspeeding",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.147699625,73.519216375",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.147699625,73.519216375"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.90202344444444,
+          21.08948511111111
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 56,
+        "accident_count": 9,
+        "Hotspot_Level": "Critical",
+        "severity_sum": 42.0,
+        "years_present": "[2020, 2023, 2024]",
+        "Dominant_Nature": "Head on collision",
+        "Dominant_Causes": "Driver fault",
+        "Dominant_Road": "Slight Curve",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.08948511111111,72.90202344444444",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.08948511111111,72.90202344444444"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.080415,
+          21.101615
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 57,
+        "accident_count": 3,
+        "Hotspot_Level": "Moderate",
+        "severity_sum": 8.5,
+        "years_present": "[2020, 2022, 2024]",
+        "Dominant_Nature": "Head on collision",
+        "Dominant_Causes": "Driver fault",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.101615,73.080415",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.101615,73.080415"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.619964,
+          21.17258075
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 58,
+        "accident_count": 4,
+        "Hotspot_Level": "Serious",
+        "severity_sum": 14.5,
+        "years_present": "[2022, 2023, 2024]",
+        "Dominant_Nature": "Rear End Collision",
+        "Dominant_Causes": "Driver fault",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.17258075,73.619964",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.17258075,73.619964"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.33656175,
+          21.0998735
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 59,
+        "accident_count": 4,
+        "Hotspot_Level": "Serious",
+        "severity_sum": 13.0,
+        "years_present": "[2022, 2023]",
+        "Dominant_Nature": "Overturning",
+        "Dominant_Causes": "Overspeeding",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.0998735,73.33656175",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.0998735,73.33656175"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.17455566666666,
+          21.106398
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 60,
+        "accident_count": 3,
+        "Hotspot_Level": "Moderate",
+        "severity_sum": 13.0,
+        "years_present": "[2022, 2024]",
+        "Dominant_Nature": "Head on collision",
+        "Dominant_Causes": "Driver fault",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.106398,73.17455566666666",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.106398,73.17455566666666"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.83289075,
+          21.111507
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 61,
+        "accident_count": 4,
+        "Hotspot_Level": "Serious",
+        "severity_sum": 4.5,
+        "years_present": "[2022, 2024]",
+        "Dominant_Nature": "Head on collision",
+        "Dominant_Causes": "Driver fault",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.111507,72.83289075",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.111507,72.83289075"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.62574075,
+          21.17065425
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 62,
+        "accident_count": 4,
+        "Hotspot_Level": "Serious",
+        "severity_sum": 8.0,
+        "years_present": "[2022, 2023, 2024]",
+        "Dominant_Nature": "Head on collision",
+        "Dominant_Causes": "Driver fault",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.17065425,73.62574075",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.17065425,73.62574075"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.40700733333334,
+          21.126043666666668
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 63,
+        "accident_count": 3,
+        "Hotspot_Level": "Moderate",
+        "severity_sum": 12.0,
+        "years_present": "[2022, 2024]",
+        "Dominant_Nature": "Rear End Collision",
+        "Dominant_Causes": "Vehicle out of control",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.126043666666668,73.40700733333334",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.126043666666668,73.40700733333334"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.42491688888889,
+          21.126092555555555
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 64,
+        "accident_count": 9,
+        "Hotspot_Level": "Critical",
+        "severity_sum": 27.0,
+        "years_present": "[2022, 2023, 2024]",
+        "Dominant_Nature": "Rear End Collision",
+        "Dominant_Causes": "Overspeeding",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.126092555555555,73.42491688888889",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.126092555555555,73.42491688888889"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.97159525000001,
+          21.08554725
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 65,
+        "accident_count": 4,
+        "Hotspot_Level": "Serious",
+        "severity_sum": 13.5,
+        "years_present": "[2022, 2023, 2024]",
+        "Dominant_Nature": "Rear End Collision",
+        "Dominant_Causes": "Driver fault",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.08554725,72.97159525000001",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.08554725,72.97159525000001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.457076,
+          21.130741
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 66,
+        "accident_count": 3,
+        "Hotspot_Level": "Moderate",
+        "severity_sum": 5.5,
+        "years_present": "[2022, 2023, 2024]",
+        "Dominant_Nature": "8 \nTempo Caught fire",
+        "Dominant_Causes": "Mechanical / Road condition",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.130741,73.457076",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.130741,73.457076"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.85316033333334,
+          21.10529633333333
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 67,
+        "accident_count": 3,
+        "Hotspot_Level": "Moderate",
+        "severity_sum": 10.0,
+        "years_present": "[2022, 2023, 2024]",
+        "Dominant_Nature": "Rear End Collision",
+        "Dominant_Causes": "Drunken",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.10529633333333,72.85316033333334",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.10529633333333,72.85316033333334"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.57320433333332,
+          21.167186
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 68,
+        "accident_count": 3,
+        "Hotspot_Level": "Moderate",
+        "severity_sum": 10.0,
+        "years_present": "[2022, 2023]",
+        "Dominant_Nature": "Head on collision",
+        "Dominant_Causes": "Driver fault",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.167186,73.57320433333332",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.167186,73.57320433333332"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.6394765,
+          21.16467275
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 69,
+        "accident_count": 4,
+        "Hotspot_Level": "Serious",
+        "severity_sum": 7.0,
+        "years_present": "[2022, 2023, 2024]",
+        "Dominant_Nature": "Head on collision",
+        "Dominant_Causes": "Driver fault",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.16467275,73.6394765",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.16467275,73.6394765"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.4884575,
+          21.137853375
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 70,
+        "accident_count": 8,
+        "Hotspot_Level": "Critical",
+        "severity_sum": 29.0,
+        "years_present": "[2022, 2023, 2024]",
+        "Dominant_Nature": "Rear End Collision",
+        "Dominant_Causes": "Driver fault",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.137853375,73.4884575",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.137853375,73.4884575"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.237123375,
+          21.09929475
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 71,
+        "accident_count": 8,
+        "Hotspot_Level": "Critical",
+        "severity_sum": 21.0,
+        "years_present": "[2023, 2024]",
+        "Dominant_Nature": "Rear End Collision",
+        "Dominant_Causes": "Driver fault",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.09929475,73.237123375",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.09929475,73.237123375"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.8815711111111,
+          21.097980777777774
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 72,
+        "accident_count": 9,
+        "Hotspot_Level": "Critical",
+        "severity_sum": 23.5,
+        "years_present": "[2023, 2024]",
+        "Dominant_Nature": "Rear End Collision",
+        "Dominant_Causes": "Driver fault",
+        "Dominant_Road": "Slight Curve",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.097980777777774,72.8815711111111",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.097980777777774,72.8815711111111"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.112969,
+          21.106811
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 73,
+        "accident_count": 5,
+        "Hotspot_Level": "Serious",
+        "severity_sum": 10.0,
+        "years_present": "[2023, 2024]",
+        "Dominant_Nature": "Overturning",
+        "Dominant_Causes": "Overspeeding",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.106811,73.112969",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.106811,73.112969"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.54430657142858,
+          21.161114857142856
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 74,
+        "accident_count": 7,
+        "Hotspot_Level": "Critical",
+        "severity_sum": 32.0,
+        "years_present": "[2023, 2024]",
+        "Dominant_Nature": "Head on collision",
+        "Dominant_Causes": "Driver fault",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.161114857142856,73.54430657142858",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.161114857142856,73.54430657142858"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.92240066666666,
+          21.09044083333333
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 75,
+        "accident_count": 6,
+        "Hotspot_Level": "Critical",
+        "severity_sum": 22.0,
+        "years_present": "[2022, 2023, 2024]",
+        "Dominant_Nature": "Overturning",
+        "Dominant_Causes": "Driver fault",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.09044083333333,72.92240066666666",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.09044083333333,72.92240066666666"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.66143366666667,
+          21.148432666666668
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 76,
+        "accident_count": 3,
+        "Hotspot_Level": "Moderate",
+        "severity_sum": 8.5,
+        "years_present": "[2020, 2023]",
+        "Dominant_Nature": "Head on collision",
+        "Dominant_Causes": "Overspeeding",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.148432666666668,72.66143366666667",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.148432666666668,72.66143366666667"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.52530433333332,
+          21.150588
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 77,
+        "accident_count": 3,
+        "Hotspot_Level": "Moderate",
+        "severity_sum": 5.5,
+        "years_present": "[2023, 2024]",
+        "Dominant_Nature": "Head on collision",
+        "Dominant_Causes": "Overspeeding",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.150588,73.52530433333332",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.150588,73.52530433333332"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.21849375,
+          21.1030555
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 78,
+        "accident_count": 4,
+        "Hotspot_Level": "Serious",
+        "severity_sum": 8.5,
+        "years_present": "[2023, 2024]",
+        "Dominant_Nature": "Overturning",
+        "Dominant_Causes": "Drunken",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.1030555,73.21849375",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.1030555,73.21849375"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.95037242857143,
+          21.085967714285715
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 79,
+        "accident_count": 7,
+        "Hotspot_Level": "Critical",
+        "severity_sum": 19.0,
+        "years_present": "[2023, 2024]",
+        "Dominant_Nature": "Rear End Collision",
+        "Dominant_Causes": "Overspeeding",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.085967714285715,72.95037242857143",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.085967714285715,72.95037242857143"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.51535733333333,
+          21.14607
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 80,
+        "accident_count": 3,
+        "Hotspot_Level": "Moderate",
+        "severity_sum": 11.0,
+        "years_present": "[2020, 2023, 2024]",
+        "Dominant_Nature": "Rear End Collision",
+        "Dominant_Causes": "Driver fault",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.14607,73.51535733333333",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.14607,73.51535733333333"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.11406766666666,
+          21.10703833333333
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 81,
+        "accident_count": 3,
+        "Hotspot_Level": "Moderate",
+        "severity_sum": 8.0,
+        "years_present": "[2023, 2024]",
+        "Dominant_Nature": "Head on collision",
+        "Dominant_Causes": "Driver fault",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.10703833333333,73.11406766666666",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.10703833333333,73.11406766666666"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.1106074,
+          21.1063934
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 82,
+        "accident_count": 5,
+        "Hotspot_Level": "Serious",
+        "severity_sum": 13.0,
+        "years_present": "[2023, 2024]",
+        "Dominant_Nature": "Head on collision",
+        "Dominant_Causes": "Driver fault",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.1063934,73.1106074",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.1063934,73.1106074"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.460393,
+          21.13093825
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 83,
+        "accident_count": 4,
+        "Hotspot_Level": "Serious",
+        "severity_sum": 23.5,
+        "years_present": "[2023, 2024]",
+        "Dominant_Nature": "8 (Bike collide with dog)",
+        "Dominant_Causes": "Driver fault",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.13093825,73.460393",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.13093825,73.460393"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.74108516666666,
+          21.154136833333336
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 84,
+        "accident_count": 6,
+        "Hotspot_Level": "Critical",
+        "severity_sum": 18.0,
+        "years_present": "[2023, 2024]",
+        "Dominant_Nature": "Head on collision",
+        "Dominant_Causes": "Driver fault",
+        "Dominant_Road": "Slight Curve",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.154136833333336,72.74108516666666",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.154136833333336,72.74108516666666"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.913717,
+          21.091706
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 85,
+        "accident_count": 4,
+        "Hotspot_Level": "Serious",
+        "severity_sum": 14.5,
+        "years_present": "[2023, 2024]",
+        "Dominant_Nature": "Overturning",
+        "Dominant_Causes": "Driver fault",
+        "Dominant_Road": "Slight Curve",
+        "Dominant_Weather": "Heavy rain",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.091706,72.913717",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.091706,72.913717"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.644529,
+          21.1259305
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 86,
+        "accident_count": 4,
+        "Hotspot_Level": "Serious",
+        "severity_sum": 9.0,
+        "years_present": "[2023, 2024]",
+        "Dominant_Nature": "Head on collision",
+        "Dominant_Causes": "Overspeeding",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.1259305,72.644529",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.1259305,72.644529"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.873468,
+          21.0973015
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 87,
+        "accident_count": 4,
+        "Hotspot_Level": "Serious",
+        "severity_sum": 18.5,
+        "years_present": "[2020, 2023, 2024]",
+        "Dominant_Nature": "Rear End Collision",
+        "Dominant_Causes": "Overspeeding",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.0973015,72.873468",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.0973015,72.873468"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.356199,
+          21.115721333333337
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 88,
+        "accident_count": 3,
+        "Hotspot_Level": "Moderate",
+        "severity_sum": 11.5,
+        "years_present": "[2020, 2023]",
+        "Dominant_Nature": "Overturning",
+        "Dominant_Causes": "Overspeeding",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.115721333333337,73.356199",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.115721333333337,73.356199"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.083975,
+          21.101661
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 89,
+        "accident_count": 3,
+        "Hotspot_Level": "Moderate",
+        "severity_sum": 4.5,
+        "years_present": "[2023]",
+        "Dominant_Nature": "Head on collision",
+        "Dominant_Causes": "Driver fault",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.101661,73.083975",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.101661,73.083975"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.03834333333333,
+          21.10334933333333
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 90,
+        "accident_count": 3,
+        "Hotspot_Level": "Moderate",
+        "severity_sum": 7.5,
+        "years_present": "[2023, 2024]",
+        "Dominant_Nature": "Rear End Collision",
+        "Dominant_Causes": "Overspeeding",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.10334933333333,73.03834333333333",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.10334933333333,73.03834333333333"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.732827,
+          21.172448
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 91,
+        "accident_count": 3,
+        "Hotspot_Level": "Moderate",
+        "severity_sum": 3.5,
+        "years_present": "[2023, 2024]",
+        "Dominant_Nature": "Overturning",
+        "Dominant_Causes": "Driver fault",
+        "Dominant_Road": "Slight Curve",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.172448,72.732827",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.172448,72.732827"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.74833133333333,
+          21.142136333333333
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 92,
+        "accident_count": 6,
+        "Hotspot_Level": "Critical",
+        "severity_sum": 25.5,
+        "years_present": "[2023, 2024]",
+        "Dominant_Nature": "Rear End Collision",
+        "Dominant_Causes": "Driver fault",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.142136333333333,72.74833133333333",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.142136333333333,72.74833133333333"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.76845566666667,
+          21.126835
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 93,
+        "accident_count": 3,
+        "Hotspot_Level": "Moderate",
+        "severity_sum": 4.0,
+        "years_present": "[2023, 2024]",
+        "Dominant_Nature": "8 \n(Truck Caught Fire)",
+        "Dominant_Causes": "Mechanical / Road condition",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.126835,72.76845566666667",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.126835,72.76845566666667"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.30090425,
+          21.09694175
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 94,
+        "accident_count": 4,
+        "Hotspot_Level": "Serious",
+        "severity_sum": 10.5,
+        "years_present": "[2023, 2024]",
+        "Dominant_Nature": "8 (Caught Fire)",
+        "Dominant_Causes": "Driver fault",
+        "Dominant_Road": "Slight Curve",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.09694175,73.30090425",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.09694175,73.30090425"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.7046945,
+          21.1844515
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 95,
+        "accident_count": 4,
+        "Hotspot_Level": "Serious",
+        "severity_sum": 12.0,
+        "years_present": "[2024]",
+        "Dominant_Nature": "Rear End Collision",
+        "Dominant_Causes": "Overspeeding",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.1844515,72.7046945",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.1844515,72.7046945"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.66873166666666,
+          21.178430666666667
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 96,
+        "accident_count": 3,
+        "Hotspot_Level": "Moderate",
+        "severity_sum": 7.0,
+        "years_present": "[2024]",
+        "Dominant_Nature": "Overturning",
+        "Dominant_Causes": "Driver fault",
+        "Dominant_Road": "Slight Curve",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.178430666666667,72.66873166666666",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.178430666666667,72.66873166666666"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.349914,
+          21.10515733333333
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 97,
+        "accident_count": 3,
+        "Hotspot_Level": "Serious",
+        "severity_sum": 18.5,
+        "years_present": "[2023, 2024]",
+        "Dominant_Nature": "Head on collision",
+        "Dominant_Causes": "Driver fault",
+        "Dominant_Road": "Slight Curve",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.10515733333333,73.349914",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.10515733333333,73.349914"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.16087333333333,
+          21.10472933333333
+        ]
+      },
+      "properties": {
+        "Cluster_ID": 98,
+        "accident_count": 3,
+        "Hotspot_Level": "Critical",
+        "severity_sum": 39.5,
+        "years_present": "[2024]",
+        "Dominant_Nature": "Overturning",
+        "Dominant_Causes": "Driver fault",
+        "Dominant_Road": "Straight",
+        "Dominant_Weather": "Fine",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=21.10472933333333,73.16087333333333",
+        "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=21.10472933333333,73.16087333333333"
+      }
+    }
+  ]
+}

@@ -1,0 +1,510 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>NH-53 Simulation — Mission Control</title>
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Outfit:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+  :root{ --panel-bg: #0f172a; --panel-text: #94a3b8; --accent: #3b82f6; --success: #22c55e; --danger: #ef4444; }
+  
+  body{margin:0; font-family:'Outfit', sans-serif; display:flex; height:100vh; overflow:hidden; background: #000;}
+  
+  /* Layout: Map on Left, Control Panel on Right */
+  #map { flex: 1; height: 100vh; }
+  .controls-panel {
+    width: 400px;
+    background: var(--panel-bg);
+    color: var(--panel-text);
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid #1e293b;
+    box-shadow: -10px 0 30px rgba(0,0,0,0.5);
+    z-index: 1000;
+  }
+
+  /* Header */
+  .panel-header {
+    padding: 20px;
+    border-bottom: 1px solid #1e293b;
+    background: #020617;
+  }
+  .panel-title { font-size: 16px; font-weight: 700; color: #fff; letter-spacing: 1px; text-transform: uppercase; display: flex; align-items: center; justify-content: space-between; }
+  .home-btn { font-size: 11px; color: var(--accent); text-decoration: none; border: 1px solid var(--accent); padding: 4px 8px; border-radius: 4px; }
+
+  /* Scrollable Content */
+  .panel-body { flex: 1; overflow-y: auto; padding: 20px; }
+  
+  /* Sections */
+  .control-group { background: #1e293b; border-radius: 12px; padding: 15px; margin-bottom: 20px; border: 1px solid #334155; }
+  .group-label { font-size: 11px; text-transform: uppercase; color: #64748b; margin-bottom: 10px; font-weight: 700; display: block; }
+  
+  .row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+  
+  /* Inputs */
+  input[type="number"], select {
+    background: #0f172a; border: 1px solid #475569; color: white; padding: 8px; border-radius: 6px; outline: none; font-family: 'JetBrains Mono', monospace;
+  }
+  
+  /* Checkboxes */
+  .checkbox-group label { display: block; font-size: 13px; margin-bottom: 6px; cursor: pointer; color: #cbd5e1; }
+  
+  /* Action Buttons */
+  .btn-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; }
+  .btn { padding: 12px; border-radius: 8px; border: none; font-weight: 700; cursor: pointer; transition: all 0.2s; font-size: 12px; }
+  .btn-start { background: var(--accent); color: white; box-shadow: 0 0 15px rgba(59, 130, 246, 0.4); }
+  .btn-start:hover { background: #2563eb; transform: translateY(-2px); }
+  .btn-pause { background: #334155; color: white; }
+  .btn-reset { background: #334155; color: #cbd5e1; }
+
+  /* Terminal Console */
+  .terminal-window {
+    background: #000; border: 1px solid #333; border-radius: 8px; height: 180px; overflow-y: auto;
+    font-family: 'JetBrains Mono', monospace; font-size: 11px; padding: 10px; color: #22c55e;
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.8);
+  }
+  .terminal-line { margin-bottom: 4px; border-bottom: 1px solid rgba(34, 197, 94, 0.1); padding-bottom: 2px; }
+  
+  /* HUD Overlay on Map */
+  .hud-overlay {
+    position: absolute; top: 20px; left: 20px; z-index: 1000;
+    background: rgba(15, 23, 42, 0.9); backdrop-filter: blur(10px);
+    padding: 20px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    color: white; width: 220px;
+    display: none; /* Hidden until start */
+  }
+  .hud-speed { font-size: 42px; font-weight: 700; font-family: 'JetBrains Mono'; line-height: 1; color: var(--accent); }
+  .hud-unit { font-size: 12px; color: #64748b; font-weight: 600; text-transform: uppercase; }
+  .hud-label { font-size: 11px; color: #94a3b8; text-transform: uppercase; letter-spacing: 1px; margin-top: 10px; }
+  .hud-val { font-size: 18px; font-weight: 600; color: #fff; }
+
+  /* Alert Banner Animation */
+  @keyframes slideDown { 0% { transform: translate(-50%, -100%); } 100% { transform: translate(-50%, 20px); } }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: #0f172a; }
+  ::-webkit-scrollbar-thumb { background: #334155; border-radius: 3px; }
+</style>
+</head>
+<body>
+
+<div id="map"></div>
+
+<div id="hudBox" class="hud-overlay">
+  <div style="display:flex; justify-content:space-between; align-items:end;">
+    <div>
+      <div id="hudSpeed" class="hud-speed">--</div>
+      <div class="hud-unit">Rec. Limit (km/h)</div>
+    </div>
+    <div style="text-align:right">
+      <div id="realDist" class="hud-speed" style="font-size:24px; color:white">--</div>
+      <div class="hud-unit">Dist (m)</div>
+    </div>
+  </div>
+  
+  <div class="hud-label" style="margin-top:15px">Approaching Hotspot</div>
+  <div id="hudNext" class="hud-val" style="color: #cbd5e1; font-size:14px;">---</div>
+  
+  <div style="height:4px; width:100%; background:#334155; margin-top:10px; border-radius:2px; overflow:hidden">
+    <div id="riskBar" style="height:100%; width:0%; background:var(--danger); transition: width 0.5s"></div>
+  </div>
+</div>
+
+<div class="controls-panel">
+  <div class="panel-header">
+    <div class="panel-title">
+      <span>Simulation Control</span>
+      <a href="index.html" class="home-btn">EXIT</a>
+    </div>
+  </div>
+
+  <div class="panel-body">
+    
+    <div class="control-group">
+      <span class="group-label">Configuration</span>
+      <div class="row">
+        <label>Start Point</label>
+        <select id="startFrom" style="width:140px"></select>
+      </div>
+      <div class="row">
+        <label>Sim Speed (km/h)</label>
+        <input id="simSpeed" type="number" value="80" style="width:60px" />
+      </div>
+      <div class="row">
+        <label>Alert Radius (m)</label>
+        <input id="alertRadius" type="number" value="60" style="width:60px" />
+      </div>
+    </div>
+
+    <div class="control-group">
+      <span class="group-label">Warning Filters</span>
+      <div class="checkbox-group">
+        <label><input type="checkbox" id="warnCritical" checked/> <span style="color:#ef4444">●</span> Critical Hotspots</label>
+        <label><input type="checkbox" id="warnSerious" checked/> <span style="color:#f97316">●</span> Serious Hotspots</label>
+        <label><input type="checkbox" id="warnModerate" checked/> <span style="color:#fbbf24">●</span> Moderate Hotspots</label>
+      </div>
+    </div>
+
+    <div class="btn-grid">
+      <button id="btnStart" class="btn btn-start">INITIALIZE</button>
+      <button id="btnPause" class="btn btn-pause">PAUSE</button>
+      <button id="btnReset" class="btn btn-reset">RESET</button>
+    </div>
+
+    <div style="margin-top:20px;">
+      <span class="group-label">System Telemetry Log</span>
+      <div class="terminal-window" id="console">
+        <div class="terminal-line">> System Ready...</div>
+        <div class="terminal-line">> Waiting for GPS initialization...</div>
+      </div>
+    </div>
+
+    <div style="margin-top:20px;">
+      <span class="group-label">Route Data</span>
+      <div id="hotspotList" style="max-height:150px; overflow-y:auto; font-size:12px; border-top:1px solid #334155; padding-top:10px;"></div>
+    </div>
+
+  </div>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+/* ------------------------------------------------------------------ */
+/* LOGIC IS IDENTICAL TO ORIGINAL - ONLY UI RENDER FUNCTIONS CHANGED */
+/* ------------------------------------------------------------------ */
+
+/* CONFIG */
+const GEO = "/mnt/data/hotspots.geojson";   
+const LOCAL_GEO_FALLBACK = "hotspots.geojson"; 
+
+const RECOMMENDED_SPEED = {"Critical":30,"Serious":45,"Moderate":60};
+const CAUSE_SPEED_ADJUST = {"Overspeeding":-10,"Drunken":-15,"Driver fault":-5,"Vehicle out of control":-10,"Mechanical / Road condition":-5};
+const DEFAULT_SPEED = 80;
+
+/* STATE */
+let map, hotspots = [], markers = [], markerByIndex = {};
+let route = [], densified = [];
+let carMarker = null, simIndex = 0, simTimer = null, simRunning = false;
+let traveledPolyline = null, remainingPolyline = null;
+const consoleEl = document.getElementById('console');
+
+// Updated Log function for Terminal Look
+function log(s){ 
+  consoleEl.innerHTML = `<div class="terminal-line"> <span style="opacity:0.5">[${new Date().toLocaleTimeString().split(' ')[0]}]</span> ${s}</div>` + consoleEl.innerHTML; 
+}
+
+/* Audio Context */
+let audioCtx = null;
+function playBeep(){
+  try{
+    if(!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    const o = audioCtx.createOscillator(); const g = audioCtx.createGain();
+    o.type = 'sawtooth'; // Changed to sawtooth for a more digital alert sound
+    o.frequency.value = 880; 
+    o.connect(g); g.connect(audioCtx.destination);
+    const now = audioCtx.currentTime;
+    g.gain.setValueAtTime(0.1, now);
+    o.start(now);
+    o.stop(now + 0.15);
+    // Double beep
+    const o2 = audioCtx.createOscillator(); const g2 = audioCtx.createGain();
+    o2.type = 'sawtooth'; o2.frequency.value = 880;
+    o2.connect(g2); g2.connect(audioCtx.destination);
+    g2.gain.setValueAtTime(0.1, now + 0.2);
+    o2.start(now + 0.2);
+    o2.stop(now + 0.35);
+
+  }catch(e){ console.warn('beep failed', e); }
+}
+
+function speakEnglish(text){
+  try{
+    window.speechSynthesis.cancel();
+    const utter = new SpeechSynthesisUtterance();
+    utter.text = text;
+    utter.lang = 'en-US';
+    utter.rate = 1.0;
+    window.speechSynthesis.speak(utter);
+    return utter;
+  }catch(e){ console.warn('speak failed', e); return null; }
+}
+
+/* MAP SETUP */
+function initMap(){
+  map = L.map('map', {zoomControl:false}).setView([21.12,73.35],10);
+  // Dark mode tiles
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+    maxZoom: 19
+  }).addTo(map);
+}
+
+async function loadData(){
+  let gj = null;
+  try {
+    const r = await fetch(GEO);
+    if(!r.ok) throw new Error('not found');
+    gj = await r.json();
+    log('Data loaded via Session Path');
+  } catch(e) {
+    try {
+      const r2 = await fetch(LOCAL_GEO_FALLBACK);
+      if(!r2.ok) throw new Error('local not found');
+      gj = await r2.json();
+      log('Data loaded via Local File');
+    } catch(e2) {
+      alert('Error: hotspots.geojson not found.');
+      throw e2;
+    }
+  }
+
+  hotspots = gj.features || [];
+  hotspots.sort((a,b) => a.geometry.coordinates[0] - b.geometry.coordinates[0] || a.geometry.coordinates[1] - b.geometry.coordinates[1]);
+
+  hotspots.forEach((f,i)=>{
+    const p = f.properties || {};
+    const lat = f.geometry.coordinates[1], lon = f.geometry.coordinates[0];
+    const level = p.Hotspot_Level || 'Moderate';
+    const color = level === 'Critical' ? '#ef4444' : (level === 'Serious' ? '#f97316' : '#fbbf24');
+    
+    // Glowing dots for map
+    const m = L.circleMarker([lat,lon], {radius:6, fillColor:color, fillOpacity:1, color:color, weight:2, opacity:0.5});
+    m.addTo(map);
+    m.bindPopup(buildPopupHtml(p, i+1), {maxWidth:360});
+    markers.push(m); markerByIndex[i+1] = m;
+
+    const div = document.createElement('div'); 
+    div.style.padding='8px'; div.style.cursor='pointer'; div.style.borderBottom='1px solid #334155';
+    div.style.color = color;
+    div.innerHTML = `<b>#${i+1}</b> ${level} <span style="color:#94a3b8; font-size:10px">(${p.accident_count||0} accidents)</span>`;
+    div.onclick = ()=>{ map.setView([lat,lon],14); m.openPopup(); };
+    document.getElementById('hotspotList').appendChild(div);
+
+    const opt = document.createElement('option'); opt.value = String(i+1); opt.text = `Hotspot #${i+1} (${level})`;
+    document.getElementById('startFrom').appendChild(opt);
+  });
+
+  route = hotspots.map(f => [f.geometry.coordinates[1], f.geometry.coordinates[0]]);
+  densified = densify(route, 20); 
+
+  remainingPolyline = L.polyline(densified, {color:'#1e293b', weight:4, dashArray: '5, 10'}).addTo(map);
+  traveledPolyline = L.polyline([], {color:'#3b82f6', weight:4, opacity:1}).addTo(map); // Neon Blue Path
+
+  map.fitBounds(L.latLngBounds(densified).pad(0.12));
+  log(`Route calculated: ${densified.length} nav points`);
+  placeCarAtIndex(0);
+}
+
+function densify(points, steps){
+  const out = [];
+  for(let i=0;i<points.length-1;i++){
+    const a=points[i], b=points[i+1];
+    out.push(a);
+    for(let k=1;k<=steps;k++){
+      const t = k/(steps+1);
+      out.push([ a[0]*(1-t) + b[0]*t, a[1]*(1-t) + b[1]*t ]);
+    }
+  }
+  out.push(points[points.length-1]);
+  return out;
+}
+
+function buildPopupHtml(p, idx){
+  return `<div style="color:#333"><b>Hotspot #${idx}</b><br/>Level: ${p.Hotspot_Level}</div>`; // Keeping popup simple for sim view
+}
+
+/* Updated Car Icon - Neon Style */
+const CAR_SVG = encodeURIComponent(`<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'><path d='M4,24 L44,24 L40,10 L8,10 Z' fill='#3b82f6' opacity='0.8'/><circle cx='12' cy='24' r='4' fill='#fff'/><circle cx='36' cy='24' r='4' fill='#fff'/></svg>`);
+function createCarMarker(latlng){ 
+    const html = `<div style="width:20px;height:20px;background:#3b82f6;border-radius:50%;box-shadow:0 0 15px #3b82f6;border:2px solid white;"></div>`;
+    return L.marker(latlng, {icon:L.divIcon({html, className:'car-glow', iconSize:[20,20], iconAnchor:[10,10]})}).addTo(map); 
+}
+
+function placeCarAtIndex(idx){
+  if(!densified || densified.length===0) return;
+  idx = Math.max(0, Math.min(densified.length-1, idx));
+  if(!carMarker) carMarker = createCarMarker(densified[idx]); else carMarker.setLatLng(densified[idx]);
+  simIndex = idx;
+  traveledPolyline.setLatLngs(densified.slice(0, simIndex+1));
+  remainingPolyline.setLatLngs(densified.slice(simIndex));
+  document.getElementById('hudBox').style.display = 'block';
+  updateHudNearest();
+}
+
+const hotspotIndexCache = {};
+function findClosestIndexForHotspot(hotIndex){
+  if(hotspotIndexCache.hasOwnProperty(hotIndex)) return hotspotIndexCache[hotIndex];
+  if(!densified || densified.length===0) return 0;
+  const lat = hotspots[hotIndex].geometry.coordinates[1], lon = hotspots[hotIndex].geometry.coordinates[0];
+  let best=0,bestd=Infinity;
+  for(let i=0;i<densified.length;i++){
+    const d = distanceMeters(densified[i],[lat,lon]);
+    if(d < bestd){ bestd = d; best = i; }
+  }
+  hotspotIndexCache[hotIndex] = best;
+  return best;
+}
+
+function distanceMeters(a,b){
+  const R=6371000, toRad=Math.PI/180;
+  const dLat=(b[0]-a[0])*toRad, dLon=(b[1]-a[1])*toRad;
+  const A = Math.sin(dLat/2)**2 + Math.cos(a[0]*toRad)*Math.cos(b[0]*toRad)*Math.sin(dLon/2)**2;
+  return R*2*Math.atan2(Math.sqrt(A), Math.sqrt(1-A));
+}
+
+document.getElementById('btnStart').addEventListener('click', ()=>{
+  if(!densified || densified.length===0) return alert('Route not ready');
+  const startVal = document.getElementById('startFrom').value;
+  if(startVal === 'begin'){ placeCarAtIndex(0); } else { placeCarAtIndex(findClosestIndexForHotspot(parseInt(startVal,10)-1)); }
+  simRunning = true; stepSim(); log('>> SIMULATION SEQUENCE STARTED');
+});
+document.getElementById('btnPause').addEventListener('click', ()=>{
+  simRunning = false; if(simTimer) clearTimeout(simTimer); window.speechSynthesis.cancel(); log('>> PAUSED');
+});
+document.getElementById('btnReset').addEventListener('click', ()=>{
+  simRunning = false; if(simTimer) clearTimeout(simTimer); window.speechSynthesis.cancel(); placeCarAtIndex(0); for(const k in alertedState) alertedState[k]=false; log('>> SYSTEM RESET');
+});
+
+let alertedState = {}; 
+function stepSim(){
+  if(!simRunning) return;
+  const cur = densified[simIndex];
+  carMarker.setLatLng(cur);
+  traveledPolyline.setLatLngs(densified.slice(0, simIndex+1));
+  remainingPolyline.setLatLngs(densified.slice(simIndex));
+  if(simIndex % 6 === 0) map.panTo(cur, {animate:true, duration:0.5}); // Smoother panning
+
+  checkNextHotspotAndPreAlert(cur);
+  updateHudNearest();
+
+  const nextIdx = Math.min(simIndex+1, densified.length-1);
+  const next = densified[nextIdx];
+  const segDist = (nextIdx === simIndex) ? 0.1 : distanceMeters(cur, next);
+  const speedKmph = parseFloat(document.getElementById('simSpeed').value) || DEFAULT_SPEED;
+  const sec = Math.max(0.03, segDist / (speedKmph * 1000 / 3600));
+  simIndex = nextIdx;
+  if(simIndex >= densified.length-1){ simRunning = false; log('>> END OF ROUTE'); return; }
+  simTimer = setTimeout(stepSim, sec*1000);
+}
+
+function findNextHotspotAhead(){
+  let bestHot=-1, bestIdx=Infinity;
+  for(let i=0;i<hotspots.length;i++){
+    const idx = findClosestIndexForHotspot(i);
+    if(idx > simIndex && idx < bestIdx){ bestIdx = idx; bestHot = i; }
+  }
+  return bestHot;
+}
+
+function checkNextHotspotAndPreAlert(cur){
+  const nextHot = findNextHotspotAhead();
+  if(nextHot === -1) return;
+  const lat = hotspots[nextHot].geometry.coordinates[1], lon = hotspots[nextHot].geometry.coordinates[0];
+  const d = distanceMeters(cur, [lat,lon]);
+  const radius = parseFloat(document.getElementById('alertRadius').value) || 60;
+  const preSec = 3; 
+  const speedKmph = parseFloat(document.getElementById('simSpeed').value) || DEFAULT_SPEED;
+  const speedMs = speedKmph * 1000 / 3600;
+  const preDist = radius + speedMs * preSec;
+  const key = String(nextHot+1);
+  const level = (hotspots[nextHot].properties||{}).Hotspot_Level || 'Moderate';
+  if(!shouldAlertLevel(level)) return;
+
+  if(d <= preDist){
+    if(!alertedState[key] || !alertedState[key].beeped){
+      playBeep();
+      alertedState[key] = alertedState[key] || {};
+      alertedState[key].beeped = true;
+      if(alertedState[key].speakTimer) clearTimeout(alertedState[key].speakTimer);
+      alertedState[key].speakTimer = setTimeout(()=>{
+        if(simRunning) { fireSpeakForHotspot(nextHot, Math.round(d)); alertedState[key].spoken = true; }
+        alertedState[key].speakTimer = null;
+      }, preSec*1000);
+      log(`>> WARNING: Hotspot #${key} incoming (${Math.round(d)}m)`);
+    }
+  } else {
+    const hysteresis = 25;
+    if(alertedState[key] && alertedState[key].beeped && d > (preDist + hysteresis)){
+      if(alertedState[key].speakTimer) { clearTimeout(alertedState[key].speakTimer); alertedState[key].speakTimer = null; }
+      alertedState[key].beeped = false;
+      alertedState[key].spoken = false;
+    }
+  }
+}
+
+function fireSpeakForHotspot(hotIdx, distanceM){
+  const f = hotspots[hotIdx];
+  const p = f.properties || {};
+  const level = p.Hotspot_Level || 'Moderate';
+  const dc = p.Dominant_Causes || p.Dominant_Cause || 'Unknown';
+  const rec = computeRec(level, dc);
+  const chainage = p['Chainage (KM) - New NH-53'] || p['Chainage (KM) - Old NH-6'] || p.chainage || '';
+  
+  // High Class Banner
+  const banner = document.createElement('div');
+  banner.style.position='fixed'; banner.style.top='50%'; banner.style.left='50%'; banner.style.transform='translate(-50%, -50%)';
+  banner.style.padding='20px 40px'; banner.style.borderRadius='12px'; banner.style.zIndex=9999;
+  banner.style.color = '#fff'; banner.style.textAlign='center'; banner.style.animation='slideDown 0.5s forwards';
+  banner.style.background = level==='Critical' ? 'rgba(239, 68, 68, 0.95)' : (level==='Serious' ? 'rgba(249, 115, 22, 0.95)' : 'rgba(251, 191, 36, 0.95)');
+  banner.style.backdropFilter = "blur(10px)";
+  banner.style.boxShadow = "0 20px 50px rgba(0,0,0,0.5)";
+  
+  banner.innerHTML = `<div style="font-size:24px; font-weight:800; text-transform:uppercase">⚠️ ${level} Hotspot</div>
+  <div style="font-size:16px; margin-top:8px">${dc}</div>
+  <div style="font-size:32px; font-weight:700; margin-top:15px; border:2px solid white; display:inline-block; padding:5px 15px; border-radius:50px">${rec} km/h</div>`;
+  
+  document.body.appendChild(banner);
+  setTimeout(()=>{ try{ document.body.removeChild(banner);}catch(e){} },5000);
+
+  const msg = `${level} hotspot ahead. ${dc}. Limit ${rec} kilometers per hour.`;
+  speakEnglish(msg);
+  log(`>> ALERT: #${hotIdx+1} ${level} triggered.`);
+}
+
+function computeRec(level, cause){
+  let s = RECOMMENDED_SPEED[level] || 50;
+  if(cause && CAUSE_SPEED_ADJUST[cause]) s = Math.max(15, s + CAUSE_SPEED_ADJUST[cause]);
+  return s;
+}
+
+function updateHudNearest(){
+  const next = findNextHotspotAhead();
+  if(next === -1){ 
+     document.getElementById('hudNext').innerText = "Safe Zone";
+     document.getElementById('riskBar').style.width = "0%";
+     return; 
+  }
+  const lat = hotspots[next].geometry.coordinates[1], lon = hotspots[next].geometry.coordinates[0];
+  const cur = densified[simIndex];
+  const d = distanceMeters(cur, [lat,lon]);
+  
+  const p = hotspots[next].properties || {};
+  const level = p.Hotspot_Level || 'Moderate';
+  
+  document.getElementById('hudNext').innerText = `#${next+1} (${level})`;
+  document.getElementById('realDist').innerText = Math.round(d);
+  document.getElementById('hudSpeed').innerText = computeRec(level, p.Dominant_Causes||'');
+  
+  // Update Risk Bar Color
+  const bar = document.getElementById('riskBar');
+  bar.style.background = level === 'Critical' ? '#ef4444' : (level === 'Serious' ? '#f97316' : '#fbbf24');
+  // Simple proximity logic for bar width (closer = wider)
+  const maxD = 1000; 
+  const pct = Math.max(0, Math.min(100, (1 - d/maxD)*100));
+  bar.style.width = pct + "%";
+}
+
+function shouldAlertLevel(level){
+  if(level === 'Critical' && !document.getElementById('warnCritical').checked) return false;
+  if(level === 'Serious' && !document.getElementById('warnSerious').checked) return false;
+  if(level === 'Moderate' && !document.getElementById('warnModerate').checked) return false;
+  return true;
+}
+
+initMap();
+loadData();
+</script>
+</body>
+</html>
